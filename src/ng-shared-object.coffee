@@ -1,12 +1,5 @@
 'use strict'
 
-###*
- # @ngdoc function
- # @name jeuMobileApp.controller:MainCtrl
- # @description
- # context
- # Controller of the jeuMobileApp
-###
 angular.module('ngSharedObject', ['vxWamp'])
 .factory 'sharedObject', ['$rootScope', '$log', '$q', '$wamp', '$timeout',
   ($rootScope, $log, $q, $wamp, $timeout) ->

@@ -33,7 +33,8 @@ angular.config(function($wampProvider){
     }
 })
 ```
-## Inject shared  in your controller
+## Use it
+Inject shareObject in your controller
 
 ```javascript
 angular.module('modulename').controller('TheCtrl', function(sharedObject){
@@ -47,18 +48,17 @@ angular.module('modulename').controller('TheCtrl', function(sharedObject){
 })
 ```
 
-## Use it
-
 Then you can use your object as usual and see modifications 
 propagated over all browser connected to the same object.
 
 # API
 * **sharedObject.$init(prefix, master=False)** init the connection the object using the prefix 
 as wamp channel namespace to avoid collisions. Master must be `true` for one 
-* **sharedObject.$reset()** emptied the object.
+* **sharedObject.$reset()** empty the object.
 * **sharedObject.$sync()** get all data from master. Useful in case of loosing sync.
 
 # Warning
 * The master has the truth. Changes can be rejected if the master value is different.
 * Not really tested with more than 5 clients for now. Can have some race condition.
 * The master must be configured before the other client.
+* Sync is not realtime but wait 1 second to be propagated.
