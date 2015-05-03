@@ -1,13 +1,5 @@
 (function() {
   'use strict';
-
-  /**
-    * @ngdoc function
-    * @name jeuMobileApp.controller:MainCtrl
-    * @description
-    * context
-    * Controller of the jeuMobileApp
-   */
   angular.module('ngSharedObject', ['vxWamp']).factory('sharedObject', [
     '$rootScope', '$log', '$q', '$wamp', '$timeout', function($rootScope, $log, $q, $wamp, $timeout) {
       var $context, askForChanges, propagateChanges, _change, _debounce, _last$context, _master, _prefix;

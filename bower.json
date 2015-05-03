@@ -17,12 +17,18 @@
     "Angular"
   ],
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
-    "app/bower_components",
     "test",
-    "tests"
+    "tests",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "karma.conf.js",
+    "bower.json",
+    "gruntfile.js",
+    "package.json"
   ],
   "dependencies": {
     "angular": "1.2.x",
