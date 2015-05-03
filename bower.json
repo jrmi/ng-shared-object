@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "homepage": "https://github.com/jrmi/ng-shared-object",
   "license": "MIT",
+  "main": "./release/ng-shared-object.js",
   "authors": [
     "Jeremie Pardou <jrmi@jeremiez.net>"
   ],
-  "private": true,
   "keywords": [
     "WAMP",
     "websockets",
