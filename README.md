@@ -8,12 +8,12 @@ between webapps. The wamp protocol is really great and can lead to use
 # How to use ngSharedObject
 
 ## Get it
-You can use bower to get the module :
+You can use bower to get the module:
 ```bash
 $ bower install ng-shared-object --save
 ```
 ## Configure angular
-Add `ngSharedObject` to your module :
+Add `ngSharedObject` to your module:
 ```javascript
 angular.module('modulename',[
   'ngSharedObject',
@@ -22,7 +22,7 @@ angular.module('modulename',[
 
 ## Connect to a wamp server
 Get a wamp router ([Crossbar](http://crossbar.io) for example) then 
-init connection with the router :
+init connection with the router:
 ```javascript
 angular.config(function($wampProvider){
   $wampProvider.init {
@@ -34,7 +34,7 @@ angular.config(function($wampProvider){
 })
 ```
 ## Use it
-Inject shareObject in your controller
+Inject `shareObject` in your controller:
 
 ```javascript
 angular.module('modulename').controller('TheCtrl', function(sharedObject){
@@ -44,7 +44,9 @@ angular.module('modulename').controller('TheCtrl', function(sharedObject){
   
   $scope.so = sharedObject;
   
+  sharedObject['value'] = 1;
   // ... do what you want now ...
+  
 })
 ```
 
