@@ -1,0 +1,21 @@
+{
+  "name": "ng-shared-object",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Share object easily with wamp in angular",
+  "repository": "https://github.com/jrmi/ng-shared-object",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt": "~0.4.x",
+    "grunt-contrib-uglify": "~0.2.x",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-karma": "~0.7.x",
+    "karma-mocha": "~0.1.x",
+    "grunt-cli": "~0.1.x"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

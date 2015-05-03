@@ -1,0 +1,15 @@
+{
+  "name": "ng-shared-object",
+  "description": "Share object easily with wamp in angular",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jrmi/ng-shared-object",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "autobahn": "~0.9.x",
+    "angular-wamp": "~0.1.x"
+  }
+}
