@@ -9,25 +9,7 @@ module.exports = function (grunt) {
 
       karma: {
          unit: {
-            options: {
-               files: [
-                  'bower_components/angular/angular.js',
-                  'bower_components/angular-mocks/angular-mocks.js',
-                  'bower_components/chai/chai.js',
-                  'ng-shared-object.js',
-                  'test/spec.js'
-               ]
-            },
-
-            frameworks: ['mocha'],
-
-            browsers: [
-               'Chrome',
-               'PhantomJS',
-               'Firefox'
-            ],
-
-            singleRun: true
+            configFile: 'karma.conf.js'
          }
       },
 
@@ -37,14 +19,14 @@ module.exports = function (grunt) {
          },
 
          build: {
-            src: '<%= pkg.name %>.js',
-            dest: '<%= pkg.name %>.min.js'
+            src: 'release/<%= pkg.name %>.js',
+            dest: 'release/<%= pkg.name %>.min.js'
          }
       },
 
       coffee: {
          options: {
-            sourceMap: true,
+            sourceMap: false,
             sourceRoot: ''
          },
          dist: {
@@ -52,29 +34,29 @@ module.exports = function (grunt) {
                expand: true,
                cwd: 'src/',
                src: '{,*/}*.coffee',
-               dest: '',
+               dest: 'release',
                ext: '.js'
             }]
          },
          test: {
             files: [{
                expand: true,
-               cwd: 'test/spec',
+               cwd: 'src/',
                src: '{,*/}*.coffee',
-               dest: '.tmp/spec',
+               dest: 'release',
                ext: '.js'
             }]
          }
       }
    });
 
-  // Actually load this plugin's task(s).
-  grunt.loadTasks('tasks');
 
-   grunt.registerTask('test', ['karma']);
+   grunt.registerTask('test', ['coffee', 'karma']);
+
+   grunt.registerTask('build', ['coffee', 'uglify']);
 
    grunt.registerTask('default', [
-      'test',
-      'uglify'
+      'build',
+      'test'
    ]);
 };

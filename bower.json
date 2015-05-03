@@ -4,12 +4,32 @@
   "version": "0.0.1",
   "homepage": "https://github.com/jrmi/ng-shared-object",
   "license": "MIT",
+  "authors": [
+    "Jeremie Pardou <jrmi@jeremiez.net>"
+  ],
   "private": true,
+  "keywords": [
+    "WAMP",
+    "websockets",
+    "AutobahnJS",
+    "shared",
+    "object",
+    "Angular"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "angular": "1.2.x",
-    "angular-loader": "1.2.x",
-    "angular-mocks": "~1.2.x",
     "autobahn": "~0.9.x",
     "angular-wamp": "~0.1.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.x"
   }
 }
